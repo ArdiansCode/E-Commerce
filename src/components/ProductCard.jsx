@@ -3,8 +3,10 @@ import { Search, ShoppingCart, Play, Star, ArrowRight, Clock, MapPin, Utensils, 
 import { motion } from 'motion/react';
 import products from '../data/products';
 import "../index.css";
-const ProductCard = () => {
-  return (
+const ProductCard = ({ onSelectProduct }) => {
+  const [selectedId, setSelectedId] = useState(null);
+
+  return {selectedId,setSelectedId},(
     <section className="py-20" id='Menu'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-end mb-12">
@@ -19,6 +21,7 @@ const ProductCard = () => {
             <motion.div 
               key={product.id}
               whileHover={{ y: -10 }}
+              onClick={() => onSelectProduct(product.id)}
               className="bg-white p-6 shadow-sm border border-slate-100 hover:shadow-xl transition-all group"
             >
               <div className="relative mb-6">

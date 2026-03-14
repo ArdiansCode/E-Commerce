@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ShoppingCart, Play, Star, ArrowRight, Clock, MapPin, Utensils, Menu as MenuIcon, X } from 'lucide-react';
+import { Search, ShoppingCart, Menu as MenuIcon, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import "../index.css";
 const Navbar = () => {

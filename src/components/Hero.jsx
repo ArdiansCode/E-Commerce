@@ -24,7 +24,7 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap items-center gap-6 mb-12">
-              <a href='#product' className="bg-gray-600 text-white px-8 py-4 font-bold shadow-lg hover:scale-105 transition-transform">
+              <a href='#Menu' className="bg-gray-600 text-white px-8 py-4 font-bold shadow-lg hover:scale-105 transition-transform">
                 Pesan Sekarang
               </a>
             </div>

@@ -1,18 +1,30 @@
-import products  from "../data/products";
-import { useState } from "react";
 import ProductCard from "../components/ProductCard";
 import Navbar from "../components/navbar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
+import ProductDetail from "./ProductDetail";
+import useCart from "../hooks/useCart";
+import CartProduct from "./Cart";
 
 function Home() {
-    // const [viewProduct, setViewProduct] = useState();
+    const {selectedId, setSelectedId, selectedProduct} = useCart();   
 
     return (
         <>
         <Navbar />
+        { selectedId ? (
+            <div> 
+            <a href="#Menu"><button onClick={() => setSelectedId(null)} className="mt-20">Kembali</button></a>
+            <ProductDetail 
+            product={selectedProduct}
+        />
+        <CartProduct/> </div>) : (
+        <div>
         <Hero />
-        <ProductCard/>
+        <ProductCard 
+            onSelectProduct={setSelectedId}
+        />
+        </div>)}
         <Footer />
         </>
     )
