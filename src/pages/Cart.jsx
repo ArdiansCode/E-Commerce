@@ -1,11 +1,12 @@
 import useCart from "../hooks/useCart"
-
+import Navbar from "../components/navbar";
+import Footer from "../components/Footer";
 const CartProduct = () => {
     const {cart} = useCart();
-    console.log("Isi Cart saat ini:", cart);
 
     return (
         <>
+        <Navbar/>
         {cart.map((product) => (
             <div className="mt-4 p-4 border rounded">
             <p>{product.name}</p>
@@ -13,6 +14,7 @@ const CartProduct = () => {
             <p>{product.description}</p>
             </div>
         ))}
+        <Footer/>
         </>
     )
 }

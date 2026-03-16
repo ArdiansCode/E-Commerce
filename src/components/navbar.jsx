@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { Search, ShoppingCart, Menu as MenuIcon, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import "../index.css";
+import Button from './Button';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const {cart} = Button();
 
     return (
         <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
@@ -14,8 +17,8 @@ const Navbar = () => {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-                <a href="#Home" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Beranda</a>
-                <a href="#Menu" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Menu</a>
+                <a href="/Home" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Beranda</a>
+                <a href="/Home#Menu" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Menu</a>
                 <a href="#Contact" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Kontak</a>
             </div>
 
@@ -23,14 +26,15 @@ const Navbar = () => {
                 <div className="relative">
                 <input 
                     type="text" 
+                    id="search-input"
+                    name="search" 
                     placeholder="Cari..." 
                     className="pl-10 pr-4 py-2 bg-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 w-48"
                 />
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                 </div>
                 <button className="p-2 hover:bg-slate-100 rounded-full transition-colors relative">
-                <ShoppingCart className="w-5 h-5 text-slate-700" />
-                <span className="absolute top-0 right-0 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
+                {cart}
                 </button>
             </div>
 
