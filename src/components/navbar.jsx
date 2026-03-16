@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { Search, ShoppingCart, Menu as MenuIcon, X } from 'lucide-react';
+import { Search, Menu as MenuIcon, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import "../index.css";
 import Button from './Button';
 import { Link } from 'react-router-dom';
+import useCart from '../hooks/useCart';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const {cart} = Button();
+    const {searchTerm, setSearchTerm} = useCart();
+
 
     return (
         <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
@@ -29,6 +32,7 @@ const Navbar = () => {
                     id="search-input"
                     name="search" 
                     placeholder="Cari..." 
+                    onChange={(event) => setSearchTerm(event.target.value)}
                     className="pl-10 pr-4 py-2 bg-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 w-48"
                 />
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -46,7 +50,6 @@ const Navbar = () => {
             </div>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
             <motion.div 
             initial={{ opacity: 0, y: -20 }}

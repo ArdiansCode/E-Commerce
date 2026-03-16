@@ -6,6 +6,8 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import CartProduct from './pages/Cart.jsx'
 import ProductDetail from './pages/ProductDetail.jsx'
+import CheckOut from './pages/Checkout.jsx'
+import Success from './pages/Success.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +17,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/Home" element={<Home />} />
         <Route path="/Cart" element={<CartProduct />} />
         <Route path='/Product-Detail' element={<ProductDetail />} />
+        <Route path='/Checkout/:id' element={<CheckOut />} />
+        <Route path='/Success' element={<Success />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

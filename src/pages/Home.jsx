@@ -11,27 +11,22 @@ function Home() {
     if (selectedId) {
         return (
             <>
-             <a href="#Menu">
-                <button onClick={() => setSelectedId(null)} className="mt-20">
-                    Kembali
-                </button>
-            </a>
             <ProductDetail 
                 product={selectedProduct} 
             /></>
         );
-    } else {
-        return (
-            <>
-            <Navbar />
-            <Hero />
-            <ProductCard 
-                onSelectProduct={setSelectedId}
-            />
-            <Footer />
-            </>
-        )
     }
+    return (
+        <>
+        <Navbar />
+        <Hero />
+        <ProductCard 
+            onSelectProduct={setSelectedId}
+        />
+        <Footer />
+        </>
+    )
+
 }
 
 export default Home;

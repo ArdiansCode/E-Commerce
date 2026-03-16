@@ -3,8 +3,10 @@ import { Search, ShoppingCart, Play, Star, ArrowRight, Clock, MapPin, Utensils, 
 import { motion } from 'motion/react';
 import products from '../data/products';
 import "../index.css";
+import useCart from '../hooks/useCart';
 const ProductCard = ({ onSelectProduct }) => {
   const [selectedId, setSelectedId] = useState(null);
+  const {filteredData} = useCart()
 
   return {selectedId,setSelectedId},(
     <section className="py-20" id='Menu'>
@@ -17,7 +19,7 @@ const ProductCard = ({ onSelectProduct }) => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
+          {filteredData.map((product) => (
             <motion.div 
               key={product.id}
               whileHover={{ y: -10 }}

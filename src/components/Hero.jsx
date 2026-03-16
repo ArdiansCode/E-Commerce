@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { Search, ShoppingCart, Play, Star, ArrowRight, Clock, MapPin, Utensils, Menu as MenuIcon, X } from 'lucide-react';
 import { motion } from 'motion/react';
 import "../index.css";
 import makananIndo from "../assets/makanan-indo.jpg"
@@ -42,9 +40,9 @@ const Hero = () => {
                 alt="Delicious Burger" 
                 className="w-full max-w-md mx-auto shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500"
               />
-              {/* Floating ingredients or elements could go here */}
+
             </div>
-            {/* Background shapes */}
+
             <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
             <div className="absolute -bottom-10 -right-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl -z-10"></div>
           </motion.div>

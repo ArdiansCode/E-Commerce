@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Search, ShoppingCart, Menu as MenuIcon, X } from 'lucide-react';
+import {ShoppingCart} from 'lucide-react';
 
 function Button() {
     const cart = <div>
