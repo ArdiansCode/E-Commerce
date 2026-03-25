@@ -12,8 +12,8 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-6">Nav Link</h4>
             <ul className="space-y-4 text-slate-400">
-              <li><a href="#Home" className="hover:text-primary transition-colors">Beranda</a></li>
-              <li><a href="#Menu" className="hover:text-primary transition-colors">Menu</a></li>
+              <li><a href="/Home" className="hover:text-primary transition-colors">Beranda</a></li>
+              <li><a href="/Menu" className="hover:text-primary transition-colors">Menu</a></li>
               <li><a href="#Contact" className="hover:text-primary transition-colors">Kontak</a></li>
             </ul>
           </div>

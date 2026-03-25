@@ -3,7 +3,7 @@ import { Search, ShoppingCart, Play, Star, ArrowRight, Clock, MapPin, Utensils, 
 import { motion } from 'motion/react';
 import products from '../data/products';
 import "../index.css";
-import useCart from '../hooks/useCart';
+import { useCart } from '../context/context';
 const ProductCard = ({ onSelectProduct }) => {
   const [selectedId, setSelectedId] = useState(null);
   const {filteredData} = useCart()

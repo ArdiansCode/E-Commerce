@@ -1,4 +1,4 @@
-import useCart from "../hooks/useCart";
+import { useCart } from "../context/context";
 import Navbar from "../components/navbar";
 import Footer from "../components/Footer";
 import { Trash2, ShoppingBag } from "lucide-react";
@@ -40,12 +40,6 @@ const CartProduct = () => {
                                             <span className="font-extrabold text-primary">Rp {product.price?.toLocaleString()}</span>
                                         </div>
                                     </div>
-
-                                    <button 
-                                        className="p-3 text-slate-300 hover:text-red-500 hover:bg-red-50 rounded-xl transition-all"
-                                    >
-                                        <Trash2 className="w-5 h-5" />
-                                    </button>
                                 </motion.div>
                             ))}
                         </div>

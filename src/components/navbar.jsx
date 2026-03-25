@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import "../index.css";
 import Button from './Button';
 import { Link } from 'react-router-dom';
-import useCart from '../hooks/useCart';
+import { useCart } from '../context/context';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const {cart} = Button();
@@ -21,7 +21,7 @@ const Navbar = () => {
             
             <div className="hidden md:flex items-center space-x-8">
                 <a href="/Home" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Beranda</a>
-                <a href="/Home#Menu" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Menu</a>
+                <a href="/Home" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Menu</a>
                 <a href="#Contact" className="text-sm font-medium text-slate-600 hover:text-primary transition-colors">Kontak</a>
             </div>
 
@@ -56,9 +56,9 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-4"
             >
-            <a href="#" className="block text-lg font-medium text-slate-600">beranda</a>
-            <a href="#" className="block text-lg font-medium text-slate-600">Menu</a>
-            <a href="#" className="block text-lg font-medium text-slate-600">Kontak</a>
+            <a href="/Home" className="block text-lg font-medium text-slate-600">beranda</a>
+            <a href="/Home" className="block text-lg font-medium text-slate-600">Menu</a>
+            <a href="#Contact" className="block text-lg font-medium text-slate-600">Kontak</a>
             <div className="flex items-center space-x-4 pt-4">
                 <button className="flex-1 bg-primary text-white py-3 rounded-xl font-semibold">Order Now</button>
             </div>

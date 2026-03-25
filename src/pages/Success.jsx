@@ -29,7 +29,7 @@ function Success() {
                     </h1>
                     <p className="text-xl text-slate-500 max-w-md mx-auto leading-relaxed mb-12">
                         Terima kasih sudah jajan di <span className="text-primary font-bold">BwaBwa</span>. 
-                        Pesananmu sedang kami siapkan dengan cinta.
+                        Pesananmu sedang kami siapkan.
                     </p>
                 </motion.div>
 

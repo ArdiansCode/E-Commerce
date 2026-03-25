@@ -3,7 +3,8 @@ import Navbar from "../components/navbar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import ProductDetail from "./ProductDetail";
-import useCart from "../hooks/useCart";
+import { useCart } from "../context/context";
+import { CartProvider } from "../context/context";
 
 function Home() {
     const {selectedId, setSelectedId, selectedProduct} = useCart();  
@@ -18,12 +19,14 @@ function Home() {
     }
     return (
         <>
+        <CartProvider>
         <Navbar />
         <Hero />
         <ProductCard 
             onSelectProduct={setSelectedId}
         />
         <Footer />
+        </CartProvider>
         </>
     )
 

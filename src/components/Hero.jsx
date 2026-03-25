@@ -18,7 +18,7 @@ const Hero = () => {
               <span className="text-primary">Makanan</span> Indo
             </h1>
             <p className="text-slate-500 text-lg mb-8 max-w-lg">
-              Kami menyediakan makanan populer Indonesia. Makanan kami dibuat dengan bahan-bahan segar dan dimasak dengan penuh cinta. Pesan sekarang dan nikmati!
+              Kami menyediakan makanan populer Indonesia. Makanan kami dibuat dengan bahan-bahan segar dan dimasak dengan sepenuh hati. Pesan sekarang dan nikmati!
             </p>
             
             <div className="flex flex-wrap items-center gap-6 mb-12">

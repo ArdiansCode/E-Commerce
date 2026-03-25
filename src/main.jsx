@@ -8,9 +8,11 @@ import CartProduct from './pages/Cart.jsx'
 import ProductDetail from './pages/ProductDetail.jsx'
 import CheckOut from './pages/Checkout.jsx'
 import Success from './pages/Success.jsx'
+import { CartProvider } from './context/context.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <CartProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
@@ -21,5 +23,6 @@ createRoot(document.getElementById('root')).render(
         <Route path='/Success' element={<Success />} />
       </Routes>
     </BrowserRouter>
+    </CartProvider>
   </StrictMode>,
 )

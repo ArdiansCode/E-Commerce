@@ -1,4 +1,4 @@
-import useCart from "../hooks/useCart";
+import { useCart } from "../context/context";
 import Navbar from "../components/navbar";
 import Footer from "../components/Footer";
 import { Link } from 'react-router-dom';
@@ -20,11 +20,9 @@ const ProductDetail = ({ product }) => {
                 {product ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <motion.div 
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
                             className="relative"
                         >
-                            <div className="aspect-square overflow-hidden rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+                            <div className="aspect-square overflow-hidden rounded-2xl shadow-2xl hover:rotate-0 transition-transform duration-500">
                                 <img 
                                     src={product.img} 
                                     alt={product.name} 

@@ -1,4 +1,4 @@
-import useCart from "../hooks/useCart";
+import { useCart } from "../context/context";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "../components/navbar";
